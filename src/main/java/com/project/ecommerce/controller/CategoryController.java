@@ -22,8 +22,8 @@ public class CategoryController {
 
     @GetMapping("/")
     public ResponseEntity<List<Category>> getCategories() {
-        List<Category> body = categoryService.listCategories();
-        return new ResponseEntity<>(body, HttpStatus.OK);
+        List<Category> categories = categoryService.listCategories();
+        return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
     // @Valid = TO VALIDATE THE BEAN
